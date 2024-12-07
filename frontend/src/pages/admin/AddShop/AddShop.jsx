@@ -6,18 +6,27 @@ import axios from 'axios'
 
 const AddShop = () => {
 
-    const { shop, setShop } = useContext(MainContext)
+    const { setShop } = useContext(MainContext)
 
     return (
         <div className="add__sh">
             <div className="container add__sh__cont">
                 <Formik
-                    initialValues={{ title: '', image: '', additionalImage: '', category: '', price: '', about: '', dimensions: '', weight: '' }}
+                    initialValues={{ title: '', images: [], category: '', price: '', about: '', dimensions: '', weight: '' }}
                     validate={values => { }}
                     onSubmit={(values, { setSubmitting, resetForm }) => {
                         const formData = new FormData();
-                        Object.keys(values).forEach(key => {
-                            formData.append(key, values[key]);
+
+                        if (values.images) {
+                            values.images.forEach((file) => {
+                                formData.append('images', file)
+                            })
+                        }
+
+                        Object.keys(values).forEach((key) => {
+                            if (key !== 'images') {
+                                formData.append(key, values[key])
+                            }
                         });
 
                         axios.post('http://localhost:8080/shop', formData, {
@@ -27,26 +36,16 @@ const AddShop = () => {
                         })
                             .then(res => {
                                 setShop(res.data);
-                                // resetForm();
                             })
-                            .catch(err => {
-                                console.error(err);
-                            })
-                            .finally(() => {
-                                setSubmitting(false);
-                            });
                     }}
                 >
                     {({
                         values,
-                        errors,
-                        touched,
                         handleChange,
                         handleBlur,
                         handleSubmit,
                         setFieldValue,
-                        isSubmitting,
-                        /* and other goodies */
+                        isSubmitting
                     }) => (
                         <form className='row form4' onSubmit={handleSubmit}>
                             <div className="col-6 form4__left">
@@ -60,20 +59,13 @@ const AddShop = () => {
                                 />
                                 <input
                                     type="file"
-                                    name="image"
+                                    name="images"
                                     placeholder='Image'
-                                    onChange={(event) => {
-                                        setFieldValue("image", event.currentTarget.files[0]);
+                                    onChange={(e) => {
+                                        setFieldValue("images", Array.from(e.currentTarget.files));
                                     }}
-                                    onBlur={handleBlur}
-                                />
-                                <input
-                                    type="text"
-                                    name="additionalImage"
-                                    placeholder='Additional Image'
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.additionalImage}
+                                    multiple
+                                    accept='image/*'
                                 />
                                 <input
                                     type="text"

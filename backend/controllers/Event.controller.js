@@ -22,25 +22,14 @@ const EventsController = {
     },
     add: async (req, res) => {
         try {
-            const newItem = new Events({ ...req.body, image: 'http://localhost:8080/uploads/' + req.file.filename })
+            const image = req.file.path
+            const newItem = new Events({ ...req.body, image })
             await newItem.save()
             const allItems = await Events.find()
             res.send(allItems)
         }
         catch (error) {
             res.status(404).send(error)
-        }
-    },
-    edit: async (req, res) => {
-        try {
-            const { id } = req.params
-            await Events.findByIdAndUpdate(id, { ...req.body })
-            const allItems = await Events.find()
-            res.send(allItems)
-        }
-        catch (error) {
-            res.status(404).send(error)
-
         }
     },
     delete: async (req, res) => {

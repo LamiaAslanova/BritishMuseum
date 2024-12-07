@@ -22,7 +22,8 @@ const ShopController = {
     },
     add: async (req, res) => {
         try {
-            const newItem = new Shop({ ...req.body, image: 'http://localhost:8080/uploads/' + req.file.filename })
+            const images = req.files.map((file) => file.path)
+            const newItem = new Shop({ ...req.body, images })
             await newItem.save()
             const allItems = await Shop.find()
             res.send(allItems)

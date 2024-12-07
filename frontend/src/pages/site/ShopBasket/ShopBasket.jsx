@@ -13,9 +13,9 @@ const ShopBasket = () => {
 
   useEffect(() => {
     if (!userLocal.id) {
-        navigate('/sign-up')
+      navigate('/sign-up')
     }
-}, [userLocal, navigate])
+  }, [userLocal, navigate])
 
   return (
     <div className="shopBasket">

@@ -7,17 +7,14 @@ import Explore from '../../../components/site/HomeComponents/Explore/Explore'
 import Welcome from '../../../components/site/HomeComponents/Welcome/Welcome'
 import MainContext from '../../../context/context'
 import Empty from '../../../components/site/HomeComponents/EmptySection/Empty'
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 
 const Home = () => {
 
-  const { exhibitions, setExhibitions } = useContext(MainContext)
-  const { collections, setCollections } = useContext(MainContext)
-  const { shop, setShop } = useContext(MainContext)
+  const { exhibitions, collections, shop } = useContext(MainContext)
 
   return (
-
     <main>
       <Helmet>
         <title>British Museum</title>

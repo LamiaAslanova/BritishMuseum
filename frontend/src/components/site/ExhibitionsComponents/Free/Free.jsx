@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './Free.css'
 import Card from './Card'
 
-const Free = ({exhibitions}) => {
+const Free = ({ exhibitions }) => {
 
     return (
         <div className="free">
@@ -13,7 +13,7 @@ const Free = ({exhibitions}) => {
                     </div>
                 </div>
                 <div className="row free__cards">
-                {
+                    {
                         exhibitions.filter(item => item.category === 'Free').slice(0, 3).map((exhibition, index) => {
                             return (
                                 <Card key={index} exhibition={exhibition} />

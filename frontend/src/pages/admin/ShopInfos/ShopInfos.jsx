@@ -22,19 +22,27 @@ const ShopInfos = () => {
         </thead>
         <tbody>
           {
-            shop.map(shop__item => {
+            shop.map((shop__item, index) => {
               return (
-                <tr>
+                <tr key={index}>
                   <th scope="row">{shop__item._id}</th>
-                  <td><img width="100px" src={shop__item.image} alt="" /></td>
+                  <td>
+                    {
+                      shop__item.images.map((image, index) => {
+                        return (
+                          <img key={index} src={`http://localhost:8080/${image}`} width='100px' />
+                        )
+                      })
+                    }
+                  </td>
                   <td>{shop__item.title}</td>
                   <td>{shop__item.category}</td>
                   <td>£{shop__item.price}</td>
-                  <td><button className='btn btn-danger' onClick={() =>{
+                  <td><button className='btn btn-danger' onClick={() => {
                     axios.delete(`http://localhost:8080/shop/${shop__item._id}`)
-                    .then(res => {
-                      setShop([...res.data])
-                    })
+                      .then(res => {
+                        setShop([...res.data])
+                      })
                   }}>Delete</button></td>
                 </tr>
               )

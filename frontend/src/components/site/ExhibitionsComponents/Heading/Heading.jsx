@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import './Heading.css'
 import MainContext from '../../../../context/context'
-import { Link } from 'react-router-dom'
 import HeadingMain from './HeadingMain'
 
 const Heading = () => {

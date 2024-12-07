@@ -185,8 +185,6 @@ header {
 
 /* Media */
 
-
-
 @media (max-width: 1200px) {
     header {
         padding: 30px 0px;
@@ -270,7 +268,7 @@ header {
     color: black;
 }
 
-.dropdown__users button{
+.dropdown__users button {
     padding: 22px;
     color: #fff;
     border: none;
@@ -282,7 +280,7 @@ header {
     transition: 0.3s;
 }
 
-.dropdown__users button:hover{
+.dropdown__users button:hover {
     background-color: white;
     color: black;
 }

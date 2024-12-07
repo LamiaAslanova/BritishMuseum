@@ -1,7 +1,6 @@
 import React from 'react'
 import './Hero.css'
-import { Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const VisitHero = () => {
     return (
@@ -11,10 +10,10 @@ const VisitHero = () => {
                     <div className="row visitHero__main__row">
                         <div className="col-12 visitHero__main__col">
                             <h1>Plan your visit</h1>
-                            <RouterLink to='/basket'>
+                            <Link to='/basket'>
                                 <span>Book now</span>
                                 <i class="fa-solid fa-circle-chevron-right"></i>
-                            </RouterLink>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -23,7 +22,7 @@ const VisitHero = () => {
                         <div className="row visitHero__mini__row">
                             <div className="col-12 visitHero__mini__col">
                                 <div className="visitHero__mini__left">
-                                    <RouterLink to='/'>Home</RouterLink>
+                                    <Link to='/'>Home</Link>
                                     <i class="fa-solid fa-chevron-right"></i>
                                     <p>Visit</p>
                                 </div>

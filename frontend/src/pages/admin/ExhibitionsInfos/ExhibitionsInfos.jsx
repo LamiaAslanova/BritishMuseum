@@ -22,19 +22,19 @@ const ExhibitionsInfos = () => {
         </thead>
         <tbody>
           {
-            exhibitions.map(exhibition => {
+            exhibitions.map((exhibition, index) => {
               return (
-                <tr>
+                <tr key={index}>
                   <th scope="row">{exhibition._id}</th>
-                  <td><img width='100px' src={exhibition.image} alt="" /></td>
+                  <td><img width='200px' src={`http://localhost:8080/${exhibition.image}`} alt="" /></td>
                   <td>{exhibition.title}</td>
                   <td>{exhibition.category}</td>
                   <td>£{exhibition.price}</td>
-                  <td><button className='btn btn-danger' onClick={() =>{
+                  <td><button className='btn btn-danger' onClick={() => {
                     axios.delete(`http://localhost:8080/exhibitions/${exhibition._id}`)
-                    .then(res => {
-                      setExhibitions([...res.data])
-                    })
+                      .then(res => {
+                        setExhibitions([...res.data])
+                      })
                   }}>Delete</button></td>
                 </tr>
               )

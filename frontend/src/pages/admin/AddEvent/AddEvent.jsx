@@ -5,7 +5,7 @@ import MainContext from '../../../context/context';
 import axios from 'axios';
 
 const AddEvent = () => {
-  const { events, setEvents } = useContext(MainContext);
+  const { setEvents } = useContext(MainContext);
 
   return (
     <div className="add__ev">
@@ -25,12 +25,20 @@ const AddEvent = () => {
             place: '',
             price: ''
           }}
-          validate={values => { }}
+
           onSubmit={(values, { setSubmitting, resetForm }) => {
+
             const formData = new FormData();
+
             Object.keys(values).forEach(key => {
-              formData.append(key, values[key]);
-            });
+              if (key !== 'image') {
+                formData.append(key, values[key])
+              }
+            })
+
+            if (values.image) {
+              formData.append('image', values.image)
+            }
 
             axios.post('http://localhost:8080/events', formData, {
               headers: {
@@ -39,20 +47,11 @@ const AddEvent = () => {
             })
               .then(res => {
                 setEvents(res.data);
-                resetForm();
               })
-              .catch(err => {
-                console.error(err);
-              })
-              .finally(() => {
-                setSubmitting(false);
-              });
           }}
         >
           {({
             values,
-            errors,
-            touched,
             handleChange,
             handleBlur,
             handleSubmit,
@@ -74,8 +73,8 @@ const AddEvent = () => {
                   type="file"
                   name="image"
                   placeholder='Image'
-                  onChange={(event) => {
-                    setFieldValue("image", event.currentTarget.files[0]);
+                  onChange={(e) => {
+                    setFieldValue("image", e.currentTarget.files[0]);
                   }}
                   onBlur={handleBlur}
                 />

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const HeadingMain = () => {
 
-    const { searchQuery, handleSearchChange, filteredItems, dropdownVisible, clearSearch, detailPathSearch, dropdownHeight, setDropdownHeight, searchContainerRef } = useContext(MainContext)
+    const { searchQuery, handleSearchChange, filteredItems, dropdownVisible, clearSearch, detailPathSearch, searchContainerRef } = useContext(MainContext)
 
     return (
         <div className="search" ref={searchContainerRef}>

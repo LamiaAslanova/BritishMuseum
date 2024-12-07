@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React from 'react'
 import './Discover.css'
 import { Link } from 'react-router-dom'
 import Cards from './Cards'
 
-const Discover = ({exhibitions}) => {
+const Discover = ({ exhibitions }) => {
 
     return (
         <div className='discover'>
@@ -30,7 +30,7 @@ const Discover = ({exhibitions}) => {
                     </div>
                 </div>
             </div>
-            <Cards exhibitions={exhibitions}/>
+            <Cards exhibitions={exhibitions} />
         </div>
     )
 }

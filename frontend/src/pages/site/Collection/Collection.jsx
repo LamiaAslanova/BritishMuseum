@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet'
 
 const Collection = () => {
 
-  const { collections, setCollections } = useContext(MainContext)
+  const { collections } = useContext(MainContext)
 
   const objects = collections.slice(6)
 

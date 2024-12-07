@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import MainContext from '../../../../context/context'
 
-const Card = ({exhibition}) => {
+const Card = ({ exhibition }) => {
 
-    const {getDetailPath} = useContext(MainContext)
+    const { getDetailPath } = useContext(MainContext)
 
     const detailPath = getDetailPath(exhibition.category, exhibition._id)
 
@@ -31,12 +31,6 @@ const Card = ({exhibition}) => {
                     </div>
                 </Link>
             </div>
-            {/* <div className="col-6 special__button__col">
-                <Link className='see__ex__button'>
-                    <span>See all exhibitions and events</span>
-                    <i class="fa-solid fa-circle-chevron-right"></i>
-                </Link>
-            </div> */}
         </>
     )
 }

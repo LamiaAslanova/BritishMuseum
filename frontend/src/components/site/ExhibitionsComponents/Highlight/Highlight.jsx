@@ -1,7 +1,6 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Card from './Card'
 import './Highlight.css'
-import MainContext from '../../../../context/context'
 import { Link } from 'react-router-dom'
 
 const Highlight = ({ events }) => {

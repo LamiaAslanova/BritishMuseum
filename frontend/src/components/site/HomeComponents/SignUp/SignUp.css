@@ -61,16 +61,21 @@
                 }
             }
 
-            a:hover{
+            a:hover {
                 background-color: white;
 
-                span, i{
+                span,
+                i {
                     color: black;
                 }
             }
         }
     }
 }
+
+
+
+/* Media */
 
 @media (max-width: 992px) {
     .signup {

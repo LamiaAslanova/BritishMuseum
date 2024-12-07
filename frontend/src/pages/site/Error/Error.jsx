@@ -5,8 +5,8 @@ import Body from '../../../components/site/ErrorComponents/Body'
 const Error = () => {
   return (
     <main>
-        <Hero/>
-        <Body/>
+      <Hero />
+      <Body />
     </main>
   )
 }

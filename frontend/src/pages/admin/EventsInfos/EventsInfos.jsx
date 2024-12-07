@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import './EventsInfos.css'
 import MainContext from '../../../context/context'
-import { event } from 'jquery'
 import axios from 'axios'
 
 const EventsInfos = () => {
@@ -23,19 +22,19 @@ const EventsInfos = () => {
         </thead>
         <tbody>
           {
-            events.map(event => {
+            events.map((event, index) => {
               return (
-                <tr>
+                <tr key={index}>
                   <th scope="row">{event._id}</th>
-                  <td><img width="100px" src={event.image} alt="" /></td>
+                  <td><img width="100px" src={`http://localhost:8080/${event.image}`} /></td>
                   <td>{event.title}</td>
                   <td>{event.category}</td>
                   <td>£{event.price}</td>
-                  <td><button className='btn btn-danger' onClick={() =>{
+                  <td><button className='btn btn-danger' onClick={() => {
                     axios.delete(`http://localhost:8080/events/${event._id}`)
-                    .then(res => {
-                      setEvents([...res.data])
-                    })
+                      .then(res => {
+                        setEvents([...res.data])
+                      })
                   }}>Delete</button></td>
                 </tr>
               )

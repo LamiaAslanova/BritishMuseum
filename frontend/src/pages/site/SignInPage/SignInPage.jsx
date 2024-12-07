@@ -20,10 +20,7 @@ const SignInPage = () => {
   const navigate = useNavigate('');
   const user = useSelector((state) => state.user)
   const dispatch = useDispatch()
-  const {
-    showPassword,
-    handleClickShowPassword,
-  } = useContext(MainContext);
+  const { showPassword, handleClickShowPassword, } = useContext(MainContext);
 
   useEffect(() => {
     if (user.id) {

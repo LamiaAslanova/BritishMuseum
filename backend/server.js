@@ -16,7 +16,7 @@ app.use('/exhibitions', ExhibitionsRouter)
 app.use('/events', EventsRouter)
 app.use('/collections', CollectionsRouter)
 app.use('/shop', ShopRouter)
-app.use('/uploads', express.static('./uploads'))
+app.use('/uploads', express.static('uploads'))
 app.use(UserRouter)
 
 mongoose.connect(process.env.CONNECTION__STRING)

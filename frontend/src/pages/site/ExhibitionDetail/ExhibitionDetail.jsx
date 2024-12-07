@@ -19,7 +19,7 @@ const ExhibitionDetail = () => {
   return (
     <>
       <ExHero item={item} />
-      <ExBody item={item}/>
+      <ExBody item={item} />
     </>
   )
 }

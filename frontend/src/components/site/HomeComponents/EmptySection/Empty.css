@@ -1,4 +1,4 @@
-.empty{
+.empty {
     height: 200px;
     width: 100%;
     background-image: url('../../../../assets/images//museum.jpg');
@@ -8,32 +8,36 @@
     background-position: right;
 }
 
-@media (max-width: 992px){
-    .empty{
+
+
+/* Media */
+
+@media (max-width: 992px) {
+    .empty {
         height: 279px;
     }
 }
 
-@media (max-width: 768px){
-    .empty{
+@media (max-width: 768px) {
+    .empty {
         height: 216px;
     }
 }
 
-@media (max-width: 576px){
-    .empty{
+@media (max-width: 576px) {
+    .empty {
         height: 162px;
     }
 }
 
-@media (max-width: 451px){
-    .empty{
+@media (max-width: 451px) {
+    .empty {
         height: 127px;
     }
 }
 
-@media (max-width: 351px){
-    .empty{
+@media (max-width: 351px) {
+    .empty {
         height: 99px;
     }
 }

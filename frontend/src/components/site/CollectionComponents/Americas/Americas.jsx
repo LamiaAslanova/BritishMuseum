@@ -11,45 +11,7 @@ const Americas = ({ items }) => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        initialSlide: 0,
-        responsive: [
-            // {
-            //     breakpoint: 1024,
-            //     settings: {
-            //         slidesToShow: 3,
-            //         slidesToScroll: 3,
-            //         infinite: true,
-            //         dots: true
-            //     }
-            // },
-            // {
-            //     breakpoint: 993,
-            //     settings: {
-            //         slidesToShow: 2,
-            //         slidesToScroll: 1,
-            //         initialSlide: 2,
-            //         infinite: false,
-            //         dots: true
-            //     }
-            // },
-            // {
-            //     breakpoint: 769,
-            //     settings: {
-            //         slidesToShow: 1,
-            //         slidesToScroll: 1,
-            //         initialSlide: 1,
-            //         infinite: false,
-            //         dots: true
-            //     }
-            // },
-            // {
-            //     breakpoint: 480,
-            //     settings: {
-            //         slidesToShow: 1,
-            //         slidesToScroll: 1
-            //     }
-            // }
-        ]
+        initialSlide: 0
     };
 
     return (
@@ -58,7 +20,7 @@ const Americas = ({ items }) => {
                 <div className="row americas__title">
                     <div className="col-12 americas__title__col">
                         {
-                            items.slice(0,1).map((item, index) => {
+                            items.slice(0, 1).map((item, index) => {
                                 return (
                                     <h2 id={item.category} key={index}>{item.category}</h2>
                                 )

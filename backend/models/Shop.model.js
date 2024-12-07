@@ -5,13 +5,10 @@ const Shop = mongoose.model('Shop', new mongoose.Schema({
         type: String,
         required: true
     },
-    image: {
-        type: String,
+    images: {
+        type: [String],
+        default: [],
         required: true
-    },
-    additionalImage: {
-        type: String,
-        required: false
     },
     category: {
         type: String,

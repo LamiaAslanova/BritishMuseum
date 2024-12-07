@@ -1,5 +1,4 @@
 import React from 'react'
-// import Image from '../../../../assets/images/Photo1.jpg'
 import { Link } from 'react-router-dom'
 
 const Card = ({ exhibition }) => {

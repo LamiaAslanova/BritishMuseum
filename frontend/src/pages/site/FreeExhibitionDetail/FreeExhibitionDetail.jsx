@@ -6,20 +6,20 @@ import axios from 'axios'
 
 const FreeExhibitionDetail = () => {
 
-    const [item, setItem] = useState({})
-    const {id} = useParams()
+  const [item, setItem] = useState({})
+  const { id } = useParams()
 
-    useEffect(()=>{
-        axios.get(`http://localhost:8080/exhibitions/${id}`)
-        .then(res=>{
-            setItem(res.data)
-        })
-    }, [])
+  useEffect(() => {
+    axios.get(`http://localhost:8080/exhibitions/${id}`)
+      .then(res => {
+        setItem(res.data)
+      })
+  }, [])
 
   return (
     <>
-        <FreeExHero item={item}/>
-        <FreeExBody item={item}/>
+      <FreeExHero item={item} />
+      <FreeExBody item={item} />
     </>
   )
 }

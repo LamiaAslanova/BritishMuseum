@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const AddCollection = () => {
 
-  const { collections, setCollections } = useContext(MainContext)
+  const { setCollections } = useContext(MainContext)
 
   return (
     <div className="add__co">
@@ -16,8 +16,15 @@ const AddCollection = () => {
           validate={values => { }}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             const formData = new FormData();
+
+            if (values.image) {
+              formData.append('image', values.image)
+            }
+
             Object.keys(values).forEach(key => {
-              formData.append(key, values[key]);
+              if (key !== 'image') {
+                formData.append(key, values[key])
+              }
             });
 
             axios.post('http://localhost:8080/collections', formData, {
@@ -26,21 +33,12 @@ const AddCollection = () => {
               }
             })
               .then(res => {
-                setCollections(res.data);
-                // resetForm();
+                setCollections(res.data)
               })
-              .catch(err => {
-                console.error(err);
-              })
-              .finally(() => {
-                setSubmitting(false);
-              });
           }}
         >
           {({
             values,
-            errors,
-            touched,
             handleChange,
             handleBlur,
             handleSubmit,
@@ -62,8 +60,8 @@ const AddCollection = () => {
                   type="file"
                   name="image"
                   placeholder='Image'
-                  onChange={(event) => {
-                    setFieldValue("image", event.currentTarget.files[0]);
+                  onChange={(e) => {
+                    setFieldValue("image", e.currentTarget.files[0]);
                   }}
                   onBlur={handleBlur}
                 />

@@ -21,18 +21,18 @@ const CollectionInfos = () => {
         </thead>
         <tbody>
           {
-            collections.map(collection => {
+            collections.map((collection, index) => {
               return (
-                <tr>
+                <tr key={index}>
                   <th scope="row">{collection._id}</th>
-                  <td><img width="100px" src={collection.image} alt="" /></td>
+                  <td><img width="100px" src={`http://localhost:8080/${collection.image}`} /></td>
                   <td>{collection.title}</td>
                   <td>{collection.category}</td>
-                  <td><button className='btn btn-danger' onClick={() =>{
+                  <td><button className='btn btn-danger' onClick={() => {
                     axios.delete(`http://localhost:8080/collections/${collection._id}`)
-                    .then(res => {
-                      setCollections([...res.data])
-                    })
+                      .then(res => {
+                        setCollections([...res.data])
+                      })
                   }}>Delete</button></td>
                 </tr>
               )

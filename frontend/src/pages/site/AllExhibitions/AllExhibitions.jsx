@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext } from 'react'
 import './AllExhibitions.css'
 import Card from './Card'
 import MainContext from '../../../context/context'
@@ -8,7 +8,7 @@ import HeadingMain from '../../../components/site/ExhibitionsComponents/Heading/
 
 const AllExhibitions = () => {
 
-    const { exhibitions, dropdownHeight} = useContext(MainContext)
+    const { exhibitions, dropdownHeight } = useContext(MainContext)
 
     return (
         <div className="allEx">
@@ -19,7 +19,7 @@ const AllExhibitions = () => {
                 <div className="row allEx__title__row" style={{ marginBottom: `${dropdownHeight}px` }}>
                     <div className="col-12 allEx__title__col">
                         <h1>Exhibitions</h1>
-                        <HeadingMain/>
+                        <HeadingMain />
                     </div>
                 </div>
             </div>

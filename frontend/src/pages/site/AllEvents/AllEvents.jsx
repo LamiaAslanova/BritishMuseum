@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext } from 'react'
 import './AllEvents.css'
 import Card from './Card'
 import MainContext from '../../../context/context'

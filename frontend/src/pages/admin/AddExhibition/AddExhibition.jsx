@@ -5,19 +5,25 @@ import MainContext from '../../../context/context';
 import axios from 'axios';
 
 const AddExhibition = () => {
-  const { exhibitions, setExhibitions } = useContext(MainContext);
+  const { setExhibitions } = useContext(MainContext);
 
   return (
     <div className="add__ex">
       <div className="container add__ex__cont">
         <Formik
           initialValues={{ title: '', image: '', category: '', date: '', time: '', suppBy: '', additionalSuppBy: '', desc: '', additionalDesc: '', room: '', roomName: '', price: '' }}
-          validate={values => { }}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             const formData = new FormData();
-            Object.keys(values).forEach(key => {
-              formData.append(key, values[key]);
-            });
+
+            if (values.image) {
+              formData.append('image', values.image)
+            }
+
+            Object.keys(values).forEach((key) => {
+              if (key !== 'image') {
+                formData.append(key, values[key])
+              }
+            })
 
             axios.post('http://localhost:8080/exhibitions', formData, {
               headers: {
@@ -26,26 +32,17 @@ const AddExhibition = () => {
             })
               .then(res => {
                 setExhibitions(res.data);
-                // resetForm();
+                console.log(res.data)
               })
-              .catch(err => {
-                console.error(err);
-              })
-              .finally(() => {
-                setSubmitting(false);
-              });
           }}
         >
           {({
             values,
-            errors,
-            touched,
             handleChange,
             handleBlur,
             handleSubmit,
             setFieldValue,
             isSubmitting,
-            /* and other goodies */
           }) => (
             <form className='row form' onSubmit={handleSubmit}>
               <div className="col-6 form__left">
@@ -61,8 +58,8 @@ const AddExhibition = () => {
                   type="file"
                   name="image"
                   placeholder='Image'
-                  onChange={(event) => {
-                    setFieldValue("image", event.currentTarget.files[0]);
+                  onChange={(e) => {
+                    setFieldValue("image", e.currentTarget.files[0]);
                   }}
                   onBlur={handleBlur}
                 />
