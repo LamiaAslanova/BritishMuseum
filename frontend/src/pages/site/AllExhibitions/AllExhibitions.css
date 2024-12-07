@@ -1,0 +1,296 @@
+.allEx {
+    background-color: black;
+
+    .allEx__cont {
+        padding: 60px 0px;
+
+        .allEx__title__row {
+
+            .allEx__title__col {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                h1 {
+                    font-size: 60px;
+                    font-weight: 500;
+                    line-height: 68px;
+                    color: white;
+                    margin-bottom: 30px;
+                }
+
+                .search {
+                    width: 100%;
+                    position: relative;
+
+                    input {
+                        border: 1px solid white;
+                        background-color: black;
+                        font-size: 30px;
+                        line-height: 38px;
+                        color: white;
+                        padding: 16px 32px;
+                        height: 99.6px;
+                        width: 100%;
+                    }
+
+                    input::placeholder {
+                        color: #a5a5a5;
+                    }
+
+                    #search {
+                        color: white;
+                        font-size: 30px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 40px;
+                    }
+
+                    .clear__search{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 120px;
+                        background: none;
+                        border: none;
+                        color: white;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .results {
+        background-color: white;
+
+        .results__cont {
+
+            .results__row {
+
+                .results__col {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 25px;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+
+                    p {
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        color: black;
+                    }
+
+                    a {
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 28px;
+                        color: black;
+
+                        span {
+                            position: relative;
+                        }
+
+                        span::before {
+                            position: absolute;
+                            content: "";
+                            bottom: -1px;
+                            left: 50%;
+                            width: 0;
+                            height: 2px;
+                            background-color: black;
+                            transition: all linear 0.3s;
+                            transform-origin: center;
+                        }
+
+                        span:hover::before {
+                            left: 0;
+                            width: 100%;
+                        }
+
+                        i {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .allEx__cards__cont {
+        padding: 60px 0px;
+
+        .allEx__cards {
+
+            .single__card__col {
+                margin-bottom: 40px;
+
+                .single__card {
+                    height: 100%;
+                    border: none;
+                    background: none;
+
+                    .card__top {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        background-color: #1d1d1d;
+                        padding: 30px;
+
+                        .card__top__top {
+
+                            h3 {
+                                font-size: 30px;
+                                font-weight: 500;
+                                line-height: 38px;
+                                letter-spacing: 0;
+                                color: white;
+                                margin-bottom: 15px;
+                            }
+                        }
+
+                        .card__top__bottom {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            width: 100%;
+
+                            .card__top__bottom__left {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+
+                                p {
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    line-height: 21.7px;
+                                    letter-spacing: 0;
+                                    color: white;
+                                }
+                            }
+
+                            .card__top__bottom__right {
+
+                                div {
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    line-height: 21.7px;
+                                    letter-spacing: 0;
+                                    color: black;
+                                    background-color: white;
+                                    width: 86px;
+                                    height: 86px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    .card__bottom {
+
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.allEx .search {
+    position: relative;
+}
+
+.allEx .search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    height: auto;
+}
+
+.allEx {
+
+    .search-dropdown-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 10px;
+        border: 1px solid white;
+
+        .search-dropdown-item__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+
+            p {
+                font-size: 30px;
+                font-weight: 500;
+                line-height: 38px;
+                color: black;
+                text-align: center;
+            }
+
+        }
+
+        .search-dropdown-item__image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+
+            img {
+                width: 250px;
+            }
+        }
+
+        .search-dropdown-item__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 10%;
+
+            #go-to {
+                color: black;
+                font-size: 30px;
+            }
+        }
+    }
+    
+    .nothing{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 10px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        color: black;
+    }
+
+    .search-dropdown-item:hover {
+        background-color: black;
+
+        p {
+            color: white;
+        }
+
+        #go-to {
+            color: white;
+        }
+    }
+}

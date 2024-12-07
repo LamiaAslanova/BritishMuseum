@@ -1,0 +1,179 @@
+.guided {
+    background-color: black;
+
+    .guided__cont {
+        padding: 60px 0px 80px;
+
+        .guided__title {
+
+            .guided__title__col {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 22px;
+
+                h2 {
+                    font-size: 44px;
+                    font-weight: 500;
+                    line-height: 52px;
+                    letter-spacing: 0;
+                    color: white;
+                }
+            }
+        }
+
+        .guided__cards {
+
+            .single__card__col {
+
+                .single__card {
+                    height: 100%;
+                    border: none;
+                    background: none;
+
+                    .card__top {
+
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                        }
+                    }
+
+                    .card__bottom {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        background-color: #1d1d1d;
+                        padding: 30px;
+
+                        .card__bottom__top {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            margin-bottom: 36px;
+
+                            .card__bottom__top__left {
+
+                                .performance {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    margin-bottom: 8px;
+
+                                    i{
+                                        font-size: 18px;
+                                        color: rgba(255, 255, 255, 0.4);
+                                    }
+
+                                    span {
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        line-height: 21.7px;
+                                        color: white;
+                                        margin-left: 7px;
+                                    }
+                                }
+
+                                ul {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    gap: 20px;
+
+                                    li {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        svg{
+                                            width: 20px;
+                                            fill: rgba(255, 255, 255, 0.4);
+                                        }
+
+                                        span {
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                            line-height: 21.7px;
+                                            color: white;
+                                            margin-left: 7px;
+                                        }
+
+                                        i{
+                                            font-size: 18px;
+                                            color: rgba(255, 255, 255, 0.4);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .card__bottom__top__right {
+
+                                div {
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    line-height: 21.7px;
+                                    letter-spacing: 0;
+                                    color: black;
+                                    background-color: white;
+                                    width: 86px;
+                                    height: 86px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+
+                        .card__bottom__bottom {
+                            width: 100%;
+
+                            h3 {
+                                font-size: 22px;
+                                font-weight: 500;
+                                line-height: 30px;
+                                letter-spacing: 0;
+                                color: white;
+                                margin-bottom: 11px;
+                            }
+
+                            p {
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 28px;
+                                letter-spacing: 0;
+                                color: #a5a5a5;
+                            }
+
+                            .card__bottom__bottom__book {
+                                width: 100%;
+                                background-color: black;
+                                padding: 10px 20px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-top: 18px;
+
+                                span {
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    line-height: 28px;
+                                    letter-spacing: 0;
+                                    color: white;
+                                }
+
+                                i {
+                                    height: 100%;
+                                    color: white;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

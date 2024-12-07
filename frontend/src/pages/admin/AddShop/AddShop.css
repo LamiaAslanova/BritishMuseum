@@ -1,0 +1,52 @@
+.add__sh{
+    width: calc(100% - 300px);
+    margin-left: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .add__sh__cont{
+
+        .form4{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+
+            input {
+                padding: 10px;
+                width: 100%;
+            }
+
+            textarea {
+                padding: 10px;
+                width: 100%;
+                height: 162px;
+            }
+
+            .form4__left {
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 20px;
+
+                button{
+                    margin-right: auto;
+                    padding: 8px 20px;
+                }
+            }
+
+            .form4__right {
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 20px;
+            }
+        }
+    }
+}

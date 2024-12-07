@@ -1,0 +1,28 @@
+.delivery {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #dbdbdb;
+    margin-bottom: 30px;
+
+    .delivery__piece {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 25px;
+        text-align: center;
+
+        img {
+            margin-bottom: 10px;
+        }
+
+        span {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 13.2px;
+            color: #333333;
+        }
+    }
+}

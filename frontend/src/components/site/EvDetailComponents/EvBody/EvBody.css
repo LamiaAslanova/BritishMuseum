@@ -1,0 +1,126 @@
+#evBody {
+    padding: 60px 0px;
+    background-color: black;
+
+    .evBody__cont {
+
+        .evBody__row {
+
+            .evBody__col8 {
+                padding-right: 250px;
+
+                h3 {
+                    font-size: 30px;
+                    font-weight: 500;
+                    line-height: 38px;
+                    color: white;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: white;
+                }
+            }
+
+            .evBody__col4 {
+
+                .evBody__col4__piece {
+                    padding: 20px 0;
+                    border-bottom: 1px solid #4a4a4a;
+
+                    .piece__top {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 10px;
+                        margin-bottom: 9px;
+
+                        i {
+                            font-size: 18px;
+                            color: white;
+                        }
+
+                        p {
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 28px;
+                            color: white;
+                        }
+
+                        svg {
+                            width: 20px;
+                        }
+                    }
+
+                    .only__piece__top{
+                        margin: 0;
+                    }
+
+                    .piece__bottom {
+
+                        p {
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 28px;
+                            color: white;
+                        }
+
+                        a {
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 28px;
+                            color: white;
+                        }
+                    }
+                }
+
+                #topmost{
+                    padding: 0 0 20px;
+                }
+
+                .evBody__col4__button {
+
+                    a {
+                        width: 100%;
+                        background-color: white;
+                        padding: 10px 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 20px;
+                        border: 1px solid white;
+                        transition: 0.3s;
+
+                        span {
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 28px;
+                            letter-spacing: 0;
+                            color: black;
+                        }
+
+                        i {
+                            color: black;
+                            font-size: 18px;
+                        }
+                    }
+
+                    a:hover{
+                        background-color: black;
+
+                        span{
+                            color: white;
+                        }
+
+                        i{
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+.free {
+    background-color: black;
+
+    .free__cont {
+        padding: 60px 0px;
+        border-bottom: 1px solid #4a4a4a;
+
+        .free__title {
+
+            .free__title__col {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h2 {
+                    font-size: 44px;
+                    font-weight: 500;
+                    line-height: 52px;
+                    letter-spacing: 0;
+                    color: white;
+                    margin-bottom: 22px;
+                }
+
+                .see__ex {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: white;
+
+                    i {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .free__cards {
+
+            .single__card__col {
+
+                .single__card {
+                    height: 100%;
+                    border: none;
+                    background: none;
+
+                    .card__top {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        background-color: #1d1d1d;
+                        padding: 30px;
+
+                        .card__top__top {
+
+                            h3 {
+                                font-size: 30px;
+                                font-weight: 500;
+                                line-height: 38px;
+                                letter-spacing: 0;
+                                color: white;
+                                margin-bottom: 15px;
+                            }
+                        }
+
+                        .card__top__bottom {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            width: 100%;
+
+                            .card__top__bottom__left {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+
+                                p {
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    line-height: 21.7px;
+                                    letter-spacing: 0;
+                                    color: white;
+                                }
+                            }
+
+                            .card__top__bottom__right {
+
+                                div {
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    line-height: 21.7px;
+                                    letter-spacing: 0;
+                                    color: black;
+                                    background-color: white;
+                                    width: 86px;
+                                    height: 86px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    .card__bottom{
+
+                        img{
+                            object-fit: cover;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
