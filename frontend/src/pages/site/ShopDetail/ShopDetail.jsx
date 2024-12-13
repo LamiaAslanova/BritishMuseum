@@ -80,12 +80,15 @@ const ShopDetail = () => {
                             <div className="col-9 det__left">
                                 <div className="layout">
                                     <ul className="slider">
-                                        <li>
-                                            <img src={item.image} />
-                                        </li>
-                                        <li>
-                                            <img src={item.additionalImage} />
-                                        </li>
+                                        {
+                                            Array.isArray(item.images) && item.images.map((image, index) => {
+                                                return (
+                                                    <li key={index}>
+                                                        <img src={image} />
+                                                    </li>
+                                                )
+                                            })
+                                        }
                                     </ul>
                                 </div>
                                 <div className="tabs">

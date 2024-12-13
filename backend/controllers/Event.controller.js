@@ -1,3 +1,4 @@
+const { baseURL } = require('../baseURL')
 const { Events } = require('../models/Event.model')
 
 const EventsController = {
@@ -22,7 +23,7 @@ const EventsController = {
     },
     add: async (req, res) => {
         try {
-            const image = req.file.path
+            const image = `${baseURL}${req.file.filename}`
             const newItem = new Events({ ...req.body, image })
             await newItem.save()
             const allItems = await Events.find()

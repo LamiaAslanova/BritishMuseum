@@ -26,7 +26,7 @@ const ExhibitionsInfos = () => {
               return (
                 <tr key={index}>
                   <th scope="row">{exhibition._id}</th>
-                  <td><img width='200px' src={`http://localhost:8080/${exhibition.image}`} alt="" /></td>
+                  <td><img width='200px' src={exhibition.image} alt="" /></td>
                   <td>{exhibition.title}</td>
                   <td>{exhibition.category}</td>
                   <td>£{exhibition.price}</td>

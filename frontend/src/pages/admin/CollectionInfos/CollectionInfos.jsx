@@ -25,7 +25,7 @@ const CollectionInfos = () => {
               return (
                 <tr key={index}>
                   <th scope="row">{collection._id}</th>
-                  <td><img width="100px" src={`http://localhost:8080/${collection.image}`} /></td>
+                  <td><img width="100px" src={collection.image} /></td>
                   <td>{collection.title}</td>
                   <td>{collection.category}</td>
                   <td><button className='btn btn-danger' onClick={() => {

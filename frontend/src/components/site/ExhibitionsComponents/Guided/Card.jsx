@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Card = ({event}) => {
-  return (
-    <>
+const Card = ({ event }) => {
+    return (
+        <>
             <Link to={`/event-details/${event._id}`} className="col-4 single__card__col">
                 <div className="card single__card">
                     <div className="card__top">
@@ -36,7 +36,7 @@ const Card = ({event}) => {
                 </div>
             </Link>
         </>
-  )
+    )
 }
 
 export default Card

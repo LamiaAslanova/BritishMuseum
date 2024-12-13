@@ -1,4 +1,5 @@
 const { Exhibitions } = require('../models/Exhibition.model')
+const { baseURL } = require('../baseURL')
 
 const ExhibitionsController = {
     getAll: async (req, res) => {
@@ -22,9 +23,22 @@ const ExhibitionsController = {
     },
     add: async (req, res) => {
         try {
-            const image = req.file.path
+            const image = `${baseURL}${req.file.filename}`
             const newItem = new Exhibitions({ ...req.body, image })
             await newItem.save()
+            const allItems = await Exhibitions.find()
+            res.send(allItems)
+        }
+        catch (error) {
+            res.status(404).send(error)
+        }
+    },
+    edit: async (req, res) => {
+        try {
+            const { id } = req.params
+            const image = `${baseURL}${req.file.filename}`
+            const updatedFields = { ...req.body, image }
+            await Exhibitions.findByIdAndUpdate(id, updatedFields)
             const allItems = await Exhibitions.find()
             res.send(allItems)
         }

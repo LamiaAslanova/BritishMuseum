@@ -54,7 +54,7 @@ const CatCards = ({ filteredProducts }) => {
                       </Helmet>
                       <div className="card single__card">
                         <Link to={`/shop-details/${product._id}`} className="card__top">
-                          <img src={product.image} />
+                          <img src={product.images[0]} />
                         </Link>
                         <div className="card-body card__bottom">
                           <Link to={`/shop-details/${product._id}`}>{product.title}</Link>

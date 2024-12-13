@@ -1,3 +1,4 @@
+const { baseURL } = require('../baseURL')
 const { Shop } = require('../models/Shop.model')
 
 const ShopController = {
@@ -22,7 +23,7 @@ const ShopController = {
     },
     add: async (req, res) => {
         try {
-            const images = req.files.map((file) => file.path)
+            const images = req.files.map((file) => `${baseURL}${file.filename}`)
             const newItem = new Shop({ ...req.body, images })
             await newItem.save()
             const allItems = await Shop.find()

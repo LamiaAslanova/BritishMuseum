@@ -94,7 +94,7 @@ const AddExhibition = () => {
                   onBlur={handleBlur}
                   value={values.desc}
                 />
-                <button type="submit" disabled={isSubmitting}>
+                <button type="submit" onClick={isSubmitting}>
                   Submit
                 </button>
               </div>

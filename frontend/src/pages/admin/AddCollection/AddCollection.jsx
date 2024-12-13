@@ -73,7 +73,7 @@ const AddCollection = () => {
                   onBlur={handleBlur}
                   value={values.category}
                 />
-                <button type="submit" disabled={isSubmitting}>
+                <button type="submit" onClick={isSubmitting}>
                   Submit
                 </button>
               </div>

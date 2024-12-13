@@ -22,7 +22,7 @@ const Table = ({ shopCartItems }) => {
                                                     <tr key={index}>
                                                         <td>
                                                             <div className="shopTableItem">
-                                                                <img src={shopCartItem.item.image} alt="" />
+                                                                <img src={shopCartItem.item.images[0]} alt="" />
                                                                 <div className="shopTableItem__right">
                                                                     <h3>{shopCartItem.item.title}</h3>
                                                                     <p>{shopCartItem.item.time}</p>

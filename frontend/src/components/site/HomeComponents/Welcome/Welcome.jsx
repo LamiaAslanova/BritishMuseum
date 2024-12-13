@@ -57,7 +57,7 @@ const Welcome = ({ shop }) => {
                         shuffleArray(shop).slice(0, 7).map((product, index) => {
                             return (
                                 <div key={index} className='single__item'>
-                                    <img src={product.image} alt="" />
+                                    <img src={product.images[0]} alt="" />
                                     <h3>{product.title}</h3>
                                 </div>
                             )

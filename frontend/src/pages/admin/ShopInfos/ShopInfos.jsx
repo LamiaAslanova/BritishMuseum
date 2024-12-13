@@ -30,7 +30,7 @@ const ShopInfos = () => {
                     {
                       shop__item.images.map((image, index) => {
                         return (
-                          <img key={index} src={`http://localhost:8080/${image}`} width='100px' />
+                          <img key={index} src={image} width='100px' />
                         )
                       })
                     }

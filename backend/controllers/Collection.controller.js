@@ -1,3 +1,4 @@
+const { baseURL } = require('../baseURL')
 const { Collections } = require('../models/Collection.model')
 
 const CollectionsController = {
@@ -22,7 +23,7 @@ const CollectionsController = {
     },
     add: async (req, res) => {
         try {
-            const image = req.file.path
+            const image = `${baseURL}${req.file.filename}`
             const newItem = new Collections({ ...req.body, image })
             await newItem.save()
             const allItems = await Collections.find()

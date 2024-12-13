@@ -83,7 +83,7 @@ const AddShop = () => {
                                     onBlur={handleBlur}
                                     value={values.date}
                                 />
-                                <button type="submit" disabled={isSubmitting}>
+                                <button type="submit" onClick={isSubmitting}>
                                     Submit
                                 </button>
                             </div>
