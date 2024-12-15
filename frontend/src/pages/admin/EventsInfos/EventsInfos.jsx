@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import './EventsInfos.css'
+import '../ExhibitionsInfos/Infos.css'
 import MainContext from '../../../context/context'
 import axios from 'axios'
 
@@ -8,8 +8,8 @@ const EventsInfos = () => {
   const { events, setEvents } = useContext(MainContext)
 
   return (
-    <div className="ev__infos">
-      <table class="table table-striped">
+    <div className="infos">
+      <table class="table table-custom">
         <thead>
           <tr>
             <th scope="col">Id</th>
@@ -25,8 +25,8 @@ const EventsInfos = () => {
             events.map((event, index) => {
               return (
                 <tr key={index}>
-                  <th scope="row">{event._id}</th>
-                  <td><img width="100px" src={event.image} /></td>
+                  <td>{event._id}</td>
+                  <td><img src={event.image} /></td>
                   <td>{event.title}</td>
                   <td>{event.category}</td>
                   <td>£{event.price}</td>

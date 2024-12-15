@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import './ExhibitionsInfos.css'
+import './Infos.css'
 import MainContext from '../../../context/context'
 import axios from 'axios'
 
@@ -8,8 +8,8 @@ const ExhibitionsInfos = () => {
   const { exhibitions, setExhibitions } = useContext(MainContext)
 
   return (
-    <div className="ex__infos">
-      <table class="table table-striped">
+    <div className="infos">
+      <table class="table table-custom">
         <thead>
           <tr>
             <th scope="col">Id</th>
@@ -25,8 +25,8 @@ const ExhibitionsInfos = () => {
             exhibitions.map((exhibition, index) => {
               return (
                 <tr key={index}>
-                  <th scope="row">{exhibition._id}</th>
-                  <td><img width='200px' src={exhibition.image} alt="" /></td>
+                  <td>{exhibition._id}</td>
+                  <td><img src={exhibition.image} alt="" /></td>
                   <td>{exhibition.title}</td>
                   <td>{exhibition.category}</td>
                   <td>£{exhibition.price}</td>

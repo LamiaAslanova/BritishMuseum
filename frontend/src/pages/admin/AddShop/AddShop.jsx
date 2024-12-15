@@ -1,16 +1,16 @@
 import React, { useContext } from 'react'
-import './AddShop.css'
+import '../AddExhibition/Add.css'
 import { Formik } from 'formik'
 import MainContext from '../../../context/context'
 import axios from 'axios'
 
 const AddShop = () => {
 
-    const { setShop } = useContext(MainContext)
+    const { setShop, imageInputRef } = useContext(MainContext)
 
     return (
-        <div className="add__sh">
-            <div className="container add__sh__cont">
+        <div className="add__ex">
+            <div className="container add__ex__cont">
                 <Formik
                     initialValues={{ title: '', images: [], category: '', price: '', about: '', dimensions: '', weight: '' }}
                     validate={values => { }}
@@ -36,6 +36,8 @@ const AddShop = () => {
                         })
                             .then(res => {
                                 setShop(res.data);
+                                resetForm()
+                                imageInputRef.current.value = ''
                             })
                     }}
                 >
@@ -47,71 +49,68 @@ const AddShop = () => {
                         setFieldValue,
                         isSubmitting
                     }) => (
-                        <form className='row form4' onSubmit={handleSubmit}>
-                            <div className="col-6 form4__left">
-                                <input
-                                    type="text"
-                                    name="title"
-                                    placeholder='Title'
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.title}
-                                />
-                                <input
-                                    type="file"
-                                    name="images"
-                                    placeholder='Image'
-                                    onChange={(e) => {
-                                        setFieldValue("images", Array.from(e.currentTarget.files));
-                                    }}
-                                    multiple
-                                    accept='image/*'
-                                />
-                                <input
-                                    type="text"
-                                    name="category"
-                                    placeholder='Category'
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.category}
-                                />
-                                <input
-                                    type="number"
-                                    name="price"
-                                    placeholder='Price'
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.date}
-                                />
-                                <button type="submit" onClick={isSubmitting}>
-                                    Submit
-                                </button>
-                            </div>
-                            <div className="col-6 form4__right">
-                                <input
-                                    type='text'
-                                    name="dimensions"
-                                    placeholder='Dimensions'
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.dimensions}
-                                />
-                                <input
-                                    type="number"
-                                    name="weight"
-                                    placeholder='Weight'
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.weight}
-                                />
-                                <textarea
-                                    name="about"
-                                    placeholder='About'
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.about}
-                                />
-                            </div>
+                        <form className='add__ex__form' onSubmit={handleSubmit}>
+                            <input
+                                type="text"
+                                name="title"
+                                placeholder='Title'
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.title}
+                            />
+                            <input
+                                ref={imageInputRef}
+                                type="file"
+                                name="images"
+                                placeholder='Image'
+                                onChange={(e) => {
+                                    setFieldValue("images", Array.from(e.currentTarget.files));
+                                }}
+                                multiple
+                                accept='image/*'
+                            />
+                            <input
+                                type="text"
+                                name="category"
+                                placeholder='Category'
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.category}
+                            />
+                            <input
+                                type="number"
+                                name="price"
+                                placeholder='Price'
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.date}
+                            />
+                            <input
+                                type='text'
+                                name="dimensions"
+                                placeholder='Dimensions'
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.dimensions}
+                            />
+                            <input
+                                type="number"
+                                name="weight"
+                                placeholder='Weight'
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.weight}
+                            />
+                            <textarea
+                                name="about"
+                                placeholder='About'
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.about}
+                            />
+                            <button type="submit" onClick={isSubmitting}>
+                                Submit
+                            </button>
                         </form>
                     )}
                 </Formik>

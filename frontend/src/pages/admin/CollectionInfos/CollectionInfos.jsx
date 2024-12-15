@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import './CollectionInfos.css'
+import '../ExhibitionsInfos/Infos.css'
 import MainContext from '../../../context/context'
 import axios from 'axios'
 
@@ -8,8 +8,8 @@ const CollectionInfos = () => {
   const { collections, setCollections } = useContext(MainContext)
 
   return (
-    <div className="co__infos">
-      <table class="table table-striped">
+    <div className="infos">
+      <table class="table table-custom">
         <thead>
           <tr>
             <th scope="col">Id</th>
@@ -24,8 +24,8 @@ const CollectionInfos = () => {
             collections.map((collection, index) => {
               return (
                 <tr key={index}>
-                  <th scope="row">{collection._id}</th>
-                  <td><img width="100px" src={collection.image} /></td>
+                  <td>{collection._id}</td>
+                  <td><img src={collection.image} /></td>
                   <td>{collection.title}</td>
                   <td>{collection.category}</td>
                   <td><button className='btn btn-danger' onClick={() => {

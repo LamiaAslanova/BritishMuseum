@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const AddCollection = () => {
 
-  const { setCollections } = useContext(MainContext)
+  const { setCollections, imageInputRef } = useContext(MainContext)
 
   return (
     <div className="add__co">
@@ -34,6 +34,8 @@ const AddCollection = () => {
             })
               .then(res => {
                 setCollections(res.data)
+                resetForm()
+                imageInputRef.current.value = ''
               })
           }}
         >
@@ -43,40 +45,38 @@ const AddCollection = () => {
             handleBlur,
             handleSubmit,
             setFieldValue,
-            isSubmitting,
-            /* and other goodies */
+            isSubmitting
           }) => (
-            <form className='row form3' onSubmit={handleSubmit}>
-              <div className="col-5 form3__col">
-                <input
-                  type="text"
-                  name="title"
-                  placeholder='Title'
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.title}
-                />
-                <input
-                  type="file"
-                  name="image"
-                  placeholder='Image'
-                  onChange={(e) => {
-                    setFieldValue("image", e.currentTarget.files[0]);
-                  }}
-                  onBlur={handleBlur}
-                />
-                <input
-                  type="text"
-                  name="category"
-                  placeholder='Category'
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.category}
-                />
-                <button type="submit" onClick={isSubmitting}>
-                  Submit
-                </button>
-              </div>
+            <form className='add__co__form' onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="title"
+                placeholder='Title'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.title}
+              />
+              <input
+                ref={imageInputRef}
+                type="file"
+                name="image"
+                placeholder='Image'
+                onChange={(e) => {
+                  setFieldValue("image", e.currentTarget.files[0]);
+                }}
+                onBlur={handleBlur}
+              />
+              <input
+                type="text"
+                name="category"
+                placeholder='Category'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.category}
+              />
+              <button type="submit" onClick={isSubmitting}>
+                Submit
+              </button>
             </form>
           )}
         </Formik>

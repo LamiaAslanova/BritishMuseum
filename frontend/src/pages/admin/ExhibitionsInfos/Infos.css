@@ -1,0 +1,30 @@
+.infos {
+    width: calc(100% - 300px);
+    margin-left: auto;
+    background-color: #1d1d1d;
+    padding: 100px 0 50px;
+    min-height: 100vh;
+
+    .table-custom {
+        width: 90%;
+        margin: 0 auto;
+
+        th {
+            background-color: black;
+            color: white;
+            border: 1px solid #1d1d1d;
+            padding: 20px 20px;
+        }
+
+        td {
+            background-color: black;
+            color: white;
+            border: 1px solid #1d1d1d;
+            padding: 20px 20px;
+
+            img {
+                width: 150px;
+            }
+        }
+    }
+}
