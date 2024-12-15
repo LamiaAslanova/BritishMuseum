@@ -8,7 +8,7 @@ import HeadingMain from '../../../components/site/ExhibitionsComponents/Heading/
 
 const AllEvents = () => {
 
-    const { events, dropdownHeight } = useContext(MainContext)
+    const { events, dropdownHeight, shuffleArray } = useContext(MainContext)
 
     return (
         <div className="allEv">
@@ -39,7 +39,7 @@ const AllEvents = () => {
             <div className="custom-container allEv__cards__cont">
                 <div className="row allEv__cards">
                     {
-                        events.map((event, index) => {
+                        shuffleArray(events).map((event, index) => {
                             return (
                                 <Card key={index} event={event} />
                             )
