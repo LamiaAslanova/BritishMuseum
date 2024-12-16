@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
-import $ from 'jquery';
-import 'slick-carousel';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import './ShopDetail.css';
 import 'react-tabs/style/react-tabs.css';
 import Delivery from '../../../components/site/ShopComponents/DeliveryInfo/Delivery';
@@ -14,14 +13,6 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 const ShopDetail = () => {
-    useEffect(() => {
-        $(document).ready(function () {
-            $('.slider').slick({
-                prevArrow: '<a class="slick-prev" href="#"><i data-icon="ei-arrow-left" data-size="m"></i></a>',
-                nextArrow: '<a class="slick-next" href="#"><i data-icon="ei-arrow-right" data-size="m"></i></a>'
-            });
-        });
-    }, []);
 
     const [item, setItem] = useState({})
     const { id } = useParams()
@@ -41,6 +32,24 @@ const ShopDetail = () => {
                 setItem(res.data)
             })
     }, [])
+
+    const settings = {
+        customPaging: function (i) {
+            return (
+                <a>
+                    <div>
+                        <img src={item.images[i]} alt={`Image ${i}`} />
+                    </div>
+                </a>
+            );
+        },
+        dots: true,
+        dotsClass: "slick-dots slick-thumb",
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    }
 
     return (
         <div className="shopdet">
@@ -79,17 +88,19 @@ const ShopDetail = () => {
                         <div className="row shopdet__row2">
                             <div className="col-9 det__left">
                                 <div className="layout">
-                                    <ul className="slider">
-                                        {
-                                            Array.isArray(item.images) && item.images.map((image, index) => {
-                                                return (
-                                                    <li key={index}>
-                                                        <img src={image} />
-                                                    </li>
-                                                )
-                                            })
-                                        }
-                                    </ul>
+                                    <div className="slider-container">
+                                        <Slider {...settings}>
+                                            {
+                                                Array.isArray(item.images) && item.images.map((image, index) => {
+                                                    return (
+                                                        <div className='single__item' key={index}>
+                                                            <img src={image} />
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </Slider>
+                                    </div>
                                 </div>
                                 <div className="tabs">
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">

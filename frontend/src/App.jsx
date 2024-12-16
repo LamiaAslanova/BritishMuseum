@@ -247,7 +247,9 @@ const App = () => {
   // To reset the image upload input in the admin page
   const imageInputRef = useRef(null)
 
-  const contextData = { exhibitions, setExhibitions, events, setEvents, collections, setCollections, shop, setShop, getDetailPath, cartItems, setCartItems, addToCart, isDropdownVisible, setDropdownVisible, dropdownRef, buttonRef, toggleDropdown, closeDropdown, handleClickOutside, showPassword, setShowPassword, showConfirmPassword, setShowConfirmPassword, handleClickShowPassword, handleClickShowConfirmPassword, increaseCart, decreaseCart, removeFromCart, shopCartItems, setShopCartItems, addToShopCart, increaseShopCart, decreaseShopCart, removeFromShopCart, shuffleArray, sort, setSort, handleSortChange, search, setSearch, searchQuery, setSearchQuery, handleSearchChange, dropdownVisible, setIsDropdownVisible, filteredItems, clearSearch, detailPathSearch, dropdownHeight, setDropdownHeight, searchContainerRef, clickOutsideClear, imageInputRef }
+  const [editData, setEditData] = useState(null)
+
+  const contextData = { exhibitions, setExhibitions, events, setEvents, collections, setCollections, shop, setShop, getDetailPath, cartItems, setCartItems, addToCart, isDropdownVisible, setDropdownVisible, dropdownRef, buttonRef, toggleDropdown, closeDropdown, handleClickOutside, showPassword, setShowPassword, showConfirmPassword, setShowConfirmPassword, handleClickShowPassword, handleClickShowConfirmPassword, increaseCart, decreaseCart, removeFromCart, shopCartItems, setShopCartItems, addToShopCart, increaseShopCart, decreaseShopCart, removeFromShopCart, shuffleArray, sort, setSort, handleSortChange, search, setSearch, searchQuery, setSearchQuery, handleSearchChange, dropdownVisible, setIsDropdownVisible, filteredItems, clearSearch, detailPathSearch, dropdownHeight, setDropdownHeight, searchContainerRef, clickOutsideClear, imageInputRef, editData, setEditData }
 
   return (
     <>

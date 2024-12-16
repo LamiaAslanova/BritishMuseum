@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './Infos.css'
 import MainContext from '../../../context/context'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const ExhibitionsInfos = () => {
 
@@ -18,6 +19,7 @@ const ExhibitionsInfos = () => {
             <th scope="col">Category</th>
             <th scope="col">Price</th>
             <th scope="col">Delete</th>
+            <th scope="col">Details</th>
           </tr>
         </thead>
         <tbody>
@@ -30,12 +32,13 @@ const ExhibitionsInfos = () => {
                   <td>{exhibition.title}</td>
                   <td>{exhibition.category}</td>
                   <td>£{exhibition.price}</td>
-                  <td><button className='btn btn-danger' onClick={() => {
+                  <td className='details__td'><button className='btn btn-danger' onClick={() => {
                     axios.delete(`http://localhost:8080/exhibitions/${exhibition._id}`)
                       .then(res => {
                         setExhibitions([...res.data])
                       })
                   }}>Delete</button></td>
+                  <td className='details__td'><Link to={`/admin/admin-exhibitions-details/${exhibition._id}`}><i id='go-to' class="fa-solid fa-circle-chevron-right"></i></Link></td>
                 </tr>
               )
             })

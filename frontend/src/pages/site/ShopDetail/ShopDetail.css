@@ -101,61 +101,55 @@
                             width: 100%;
                             margin-top: 0;
                             position: relative;
-                            margin-bottom: 41px;
+                            margin-bottom: 185px;
 
                             a {
                                 color: #666;
                             }
 
-                            .slider {
-
-                                li {
-                                    /* width: 100%; */
-
-                                    img {
-                                        width: 100%;
-                                    }
-                                }
+                            .slider-container {
+                                width: 100%;
+                                background-color: white;
 
                                 .slick-list {
                                     height: 480px;
-                                    background-color: white;
 
-                                    .slick-slide {
+                                    .single__item {
 
-                                        li {
-
-                                            img {
-                                                height: 400px;
-                                                width: auto;
-                                                object-fit: contain;
-                                                margin: 40px auto;
-                                            }
+                                        img {
+                                            height: 400px;
+                                            margin: 40px auto;
                                         }
                                     }
                                 }
 
+
                                 .slick-dots {
-                                    margin-top: 5px;
-                                    margin-left: -5px;
-                                    margin-right: -5px;
-                                    display: flex;
+                                    margin-left: 15px;
+                                    margin-right: 15px;
+                                    display: flex !important;
                                     justify-content: flex-start;
                                     gap: 10px;
-                                    bottom: -130px;
+                                    bottom: -140px;
 
                                     li {
                                         list-style: none;
-                                        display: inline-block;
-                                        width: 100px;
-                                        height: 100px;
+                                        width: 88px;
+                                        height: 110px;
                                         margin: 5px;
 
-                                        img {
-                                            opacity: 0.5;
-                                            width: 100%;
+                                        div{
+                                            background-color: #ebebeb;
                                             height: 100%;
-                                            object-fit: contain;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+
+                                            img {
+                                                opacity: 0.5;
+                                                width: 100%;
+                                                object-fit: contain;
+                                            }
                                         }
 
                                         &.slick-active {

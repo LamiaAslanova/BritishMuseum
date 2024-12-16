@@ -28,6 +28,7 @@ import ShopBasket from "../pages/site/ShopBasket/ShopBasket";
 import Visit from "../pages/site/Visit/Visit";
 import ScrollToHead from "../components/site/ScrollToHead";
 import Error from "../pages/site/Error/Error";
+import AdminExDetail from "../pages/admin/AdminExDetail/AdminExDetail";
 
 const ROUTES = [
     {
@@ -143,6 +144,10 @@ const ROUTES = [
             {
                 path: "shop-infos",
                 element: <ShopInfos />
+            },
+            {
+                path: "admin-exhibitions-details/:id",
+                element: <AdminExDetail />
             }
         ]
     }
