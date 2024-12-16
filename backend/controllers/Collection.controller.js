@@ -33,6 +33,21 @@ const CollectionsController = {
             res.status(404).send(error)
         }
     },
+    edit: async (req, res) => {
+        try {
+            const { id } = req.params
+            const image = req.file ? `${baseURL}${req.file.filename}` : undefined
+            const updatedFields = req.file ? { ...req.body, image } : { ...req.body }
+            await Collections.findByIdAndUpdate(id, updatedFields)
+            const allItems = await Collections.find()
+            res.send(allItems)
+        }
+
+        catch (error) {
+            res.status(404).send(error)
+        }
+    }
+    ,
     delete: async (req, res) => {
         try {
             const { id } = req.params

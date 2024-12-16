@@ -29,6 +29,7 @@ import Visit from "../pages/site/Visit/Visit";
 import ScrollToHead from "../components/site/ScrollToHead";
 import Error from "../pages/site/Error/Error";
 import AdminExDetail from "../pages/admin/AdminExDetail/AdminExDetail";
+import AdminEvDetail from "../pages/admin/AdminEvDetail/AdminEvDetail";
 
 const ROUTES = [
     {
@@ -148,6 +149,10 @@ const ROUTES = [
             {
                 path: "admin-exhibitions-details/:id",
                 element: <AdminExDetail />
+            },
+            {
+                path: "admin-events-details/:id",
+                element: <AdminEvDetail />
             }
         ]
     }

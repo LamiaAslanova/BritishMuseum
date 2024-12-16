@@ -37,9 +37,7 @@ const ExhibitionsController = {
         try {
             const { id } = req.params
             const image = req.file ? `${baseURL}${req.file.filename}` : undefined;
-            const updatedFields = req.file
-                ? { ...req.body, image }
-                : { ...req.body };
+            const updatedFields = req.file ? { ...req.body, image } : { ...req.body };
             await Exhibitions.findByIdAndUpdate(id, updatedFields)
             const allItems = await Exhibitions.find()
             res.send(allItems)

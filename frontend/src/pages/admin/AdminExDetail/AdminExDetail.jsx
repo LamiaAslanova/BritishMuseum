@@ -33,7 +33,7 @@ const AdminExDetail = () => {
     return (
         <div className="infos ad__ex__det">
             <div className="back__to">
-                <Link to='/admin/exhibitions-infos'>Back to Exhibitions</Link>
+                <Link to='/admin/exhibitions-infos'>Back to all exhibitions</Link>
             </div>
             <table class="table table-custom">
                 <thead>
