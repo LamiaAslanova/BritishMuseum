@@ -32,13 +32,13 @@ const ExhibitionsInfos = () => {
                   <td>{exhibition.title}</td>
                   <td>{exhibition.category}</td>
                   <td>£{exhibition.price}</td>
-                  <td className='details__td'><button className='btn btn-danger' onClick={() => {
+                  <td className='special__td'><button className='btn btn-danger' onClick={() => {
                     axios.delete(`http://localhost:8080/exhibitions/${exhibition._id}`)
                       .then(res => {
                         setExhibitions([...res.data])
                       })
                   }}>Delete</button></td>
-                  <td className='details__td'><Link to={`/admin/admin-exhibitions-details/${exhibition._id}`}><i id='go-to' class="fa-solid fa-circle-chevron-right"></i></Link></td>
+                  <td className='special__td'><Link to={`/admin/admin-exhibitions-details/${exhibition._id}`}><i id='go-to' class="fa-solid fa-circle-chevron-right"></i></Link></td>
                 </tr>
               )
             })

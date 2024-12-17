@@ -63,7 +63,7 @@ const CollectionInfos = () => {
                       ) : (collection.category)
                     }
                   </td>
-                  <td>
+                  <td className='special__td'>
                     {
                       editData?._id === collection._id ? (
                         <button className='btn btn-success' onClick={() => {
@@ -81,7 +81,7 @@ const CollectionInfos = () => {
                       )
                     }
                   </td>
-                  <td><button className='btn btn-danger' onClick={() => {
+                  <td className='special__td'><button className='btn btn-danger' onClick={() => {
                     axios.delete(`http://localhost:8080/collections/${collection._id}`)
                       .then(res => {
                         setCollections([...res.data])

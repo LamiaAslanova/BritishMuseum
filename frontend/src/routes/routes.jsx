@@ -30,6 +30,7 @@ import ScrollToHead from "../components/site/ScrollToHead";
 import Error from "../pages/site/Error/Error";
 import AdminExDetail from "../pages/admin/AdminExDetail/AdminExDetail";
 import AdminEvDetail from "../pages/admin/AdminEvDetail/AdminEvDetail";
+import AdminShDetail from "../pages/admin/AdminShDetail/AdminShDetail";
 
 const ROUTES = [
     {
@@ -153,6 +154,10 @@ const ROUTES = [
             {
                 path: "admin-events-details/:id",
                 element: <AdminEvDetail />
+            },
+            {
+                path: "admin-shop-details/:id",
+                element: <AdminShDetail />
             }
         ]
     }
