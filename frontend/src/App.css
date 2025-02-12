@@ -1,0 +1,33 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue';
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Helvetica Neue';
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.custom-container {
+    width: 89%;
+    margin: 0 auto;
+}
+
+:root::-webkit-scrollbar {
+    width: 8px;
+    background-color: black;
+}
+
+:root::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #373737;
+    transition: opacity 0.2s ease-in-out;
+}

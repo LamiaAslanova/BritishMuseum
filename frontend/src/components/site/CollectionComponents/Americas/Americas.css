@@ -1,0 +1,109 @@
+.americas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: relative;
+    padding-bottom: 110px;
+    
+    .americas__cont {
+        padding: 60px 0 0;
+        border-top: 1px solid #4a4a4a;
+
+        .americas__title {
+            .americas__title__col {
+                margin-bottom: 22px;
+    
+                h2 {
+                    font-size: 44px;
+                    font-weight: 500;
+                    line-height: 52px;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .slider-container{
+        width: 89%;
+        margin: auto;
+
+        .slick-list{
+            margin: 0 -12px;
+
+            .slick-slide{
+                padding: 0 12px;
+
+                .single__carousel{
+                    height: 530px;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-position: top;
+                        object-fit: cover;
+                        margin: auto;
+                        margin-bottom: 18px;
+                    }
+
+                    h3{
+                        font-size: 18px;
+                        line-height: 28px;
+                        color: white;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .slick-prev {
+            left: -35px;
+            z-index: 10;
+        }
+
+        .slick-prev::before {
+            font-family: "Font Awesome 6 Free";
+            content: "\f137";
+            font-weight: 900;
+        }
+
+        .slick-next {
+            right: -10px;
+        }
+
+        .slick-next::before {
+            font-family: "Font Awesome 6 Free";
+            content: "\f138";
+            font-weight: 900;
+        }
+
+        .slick-arrow::before {
+            font-size: 48px;
+        }
+
+        ul {
+            bottom: -60px;
+
+            li {
+                margin: 0;
+
+                button::before {
+                    font-size: 10px;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+/* .americas::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 89%;
+    height: 1px;
+    background-color: #4a4a4a;
+    transform: translateX(-50%);
+} */

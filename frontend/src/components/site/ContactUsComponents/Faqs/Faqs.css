@@ -1,0 +1,108 @@
+.faqs {
+    padding: 60px 0;
+
+    .faqs__intro {
+
+        .faqs__intro__row {
+
+            .faqs__intro__col {
+
+                p {
+                    font-size: 30px;
+                    font-weight: 500;
+                    line-height: 38px;
+                    color: black;
+                    margin-bottom: 60px;
+                    max-width: 45%;
+                }
+            }
+        }
+    }
+
+    .faqs__title {
+        border-top: 1px solid #ccc;
+
+        .faqs__title__row {
+
+            .faqs__title__col {
+
+                h2 {
+                    font-size: 44px;
+                    font-weight: 500;
+                    line-height: 52px;
+                    color: black;
+                    margin: 60px 0 22px;
+                }
+            }
+        }
+    }
+
+    .faqs__cont {
+
+        .faqs__row {
+
+            .accordion {
+
+                .accordion-item {
+                    border-left: 0;
+                    border-right: 0;
+                    border-bottom: 1px solid #ccc;
+
+                    .accordion-button {
+                        padding: 30px 0;
+                        border-left: 0;
+                        border-right: 0;
+
+                        i {
+                            font-size: 26px;
+                            color: black;
+                            margin-right: 24px;
+                        }
+
+                        span {
+                            font-size: 30px;
+                            font-weight: 500;
+                            line-height: 34.5px;
+                            color: black;
+                        }
+                    }
+
+                    .accordion-button::after {
+                        display: none;
+                    }
+
+                    .accordion-button:not(.collapsed) {
+                        background: none;
+                        box-shadow: none;
+                    }
+
+                    .accordion-button:focus {
+                        box-shadow: none;
+                    }
+
+                    .accordion-body {
+                        width: 50%;
+                        padding: 0;
+
+                        p {
+                            margin-bottom: 18px;
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 28px;
+                            color: black;
+                        }
+                    }
+                }
+
+                .accordion-item:last-of-type {
+                    border-radius: 0;
+                }
+
+                .accordion-item:first-of-type {
+                    border-top: 1px solid #ccc;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}

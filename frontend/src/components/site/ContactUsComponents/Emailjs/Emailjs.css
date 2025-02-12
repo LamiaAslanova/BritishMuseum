@@ -1,0 +1,118 @@
+.emailjs {
+    background-color: black;
+    padding: 60px 0px;
+
+    .emailjs__cont {
+        background-color: #1d1d1d;
+
+        .emailjs__row {
+
+            .emailjs__left {
+                border-right: 1px solid black;
+            }
+
+            .emailjs__right {
+                padding-left: 0;
+
+                form {
+                    padding: 60px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+
+                    .field {
+                        width: 100%;
+                        margin-bottom: 27px;
+
+                        label {
+                            font-size: 22px;
+                            font-weight: 400;
+                            line-height: 30px;
+                            color: white;
+                            margin-bottom: 11px;
+                        }
+
+                        input,
+                        select,
+                        textarea {
+                            border: 1px solid white;
+                            padding: 10px 20px;
+                            background-color: #1d1d1d;
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 28px;
+                            font-family: 'Helvetica Neue';
+                            width: 100%;
+                            border-radius: 0;
+                            color: #a5a5a5;
+
+                            option {
+                                background-color: white;
+                                color: black;
+                            }
+                        }
+
+                        .alert {
+                            color: #f54248;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 21.8px;
+                            padding: 5px 0 0 20px;
+                            margin: 0;
+                        }
+
+                        textarea {
+                            height: 160px;
+                        }
+
+                        ::placeholder {
+                            color: #a5a5a5;
+                        }
+                    }
+
+                    h2 {
+                        font-size: 22px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        color: white;
+                        margin-bottom: 11px;
+                    }
+
+                    .privacy__notice {
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        color: white;
+                    }
+
+                    button {
+                        width: 140px;
+                        background-color: white;
+                        padding: 10px 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 27px;
+                        border: 1px solid black;
+                        transition: 0.3s;
+                        margin-left: auto;
+
+                        span {
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 28px;
+                            letter-spacing: 0;
+                            color: black;
+                        }
+
+                        i {
+                            color: black;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

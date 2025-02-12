@@ -1,0 +1,76 @@
+.top {
+    padding: 40px 0 0;
+    background-color: #f5f5f5;
+
+    .top__cont {
+
+        .top__row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .slider-container {
+                /* width: 100%; */
+                /* margin: auto; */
+
+                .slick-slider {
+
+                    .slide__component {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        position: relative;
+                        height: 670px;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                            object-fit: cover;
+                        }
+
+                        .slide__component__content {
+                            background: rgba(39, 39, 39, 0.7);
+                            padding: 30px;
+                            width: 360px;
+                            position: absolute;
+                            left: 100px;
+                            top: 100px;
+
+                            h4 {
+                                font-size: 24px;
+                                font-weight: 500;
+                                line-height: 26.4px;
+                                color: white;
+                                margin-bottom: 5px;
+                            }
+
+                            p {
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 25.6px;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                ul {
+                    bottom: -30px;
+
+                    li {
+                        margin: 0 3px;
+
+                        button::before {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .slick-arrow::before{
+                    display: none;
+                }
+            }
+        }
+    }
+}

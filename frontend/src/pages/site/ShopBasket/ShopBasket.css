@@ -1,0 +1,187 @@
+.shopBasket {
+    padding: 60px 0px;
+
+    .shopBasket__title__cont {
+
+        .shopBasket__title__row {
+
+            .shopBasket__title__col {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin: 0 auto 40px;
+
+                h2 {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 39.6px;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .shopBasket__cont {
+
+        .shopBasket__row {
+
+            .shopBasket__col {
+                margin: 0 auto;
+
+                .table {
+                    margin-bottom: 40px;
+
+                    tr {
+                        height: 170px;
+                        vertical-align: middle;
+                        border-bottom: 1px solid #efefef;
+                        border-top: 1px solid #efefef;
+
+                        td {
+                            height: 100%;
+                            padding: 0;
+
+                            .shopTableItem {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 18px;
+                                width: 100%;
+                                height: 100px;
+
+                                img {
+                                    height: 100%;
+                                }
+
+                                .shopTableItem__right {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-around;
+                                    align-items: flex-start;
+                                    width: 100%;
+                                    height: 100%;
+
+                                    h3 {
+                                        font-size: 24px;
+                                        font-weight: 400;
+                                        line-height: 33.6px;
+                                        color: black;
+                                    }
+
+                                    p {
+                                        font-size: 16.8px;
+                                        font-weight: 400;
+                                        line-height: normal;
+                                        color: black;
+                                    }
+
+
+                                    .count__div {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        width: 50%;
+                                        background-color: #f5f5f5;
+                                        padding: 3px 10px;
+
+                                        p {
+                                            font-size: 14px;
+                                            font-weight: 400;
+                                            line-height: normal;
+                                            color: #666666;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .quantity {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 50px;
+                                /* padding: 0 22px; */
+                                background-color: #f5f5f5;
+                                width: 110px;
+                                margin: 0 auto;
+
+                                p {
+                                    color: #666666;
+                                    /* margin: 0 15px; */
+                                }
+
+                                button {
+                                    border: none;
+                                    background: none;
+                                    color: #666666;
+                                    height: 100%;
+                                    padding: 0 20px;
+                                    transition: 0.3s;
+                                }
+
+                                button:hover{
+                                    color: #333333;
+                                }
+                            }
+
+                            .totalprice {
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+
+                                p {
+                                    font-size: 24px;
+                                    font-weight: 400;
+                                    line-height: 33.6px;
+                                    color: black;
+                                    margin-right: 20px;
+                                }
+
+                                button {
+                                    background-color: #f5f5f5;
+                                    border: none;
+                                    width: 50px;
+                                    height: 50px;
+                                    font-size: 20px;
+                                    color: #666666;
+                                    transition: 0.3s;
+                                }
+
+                                button:hover{
+                                    background-color: #e2e2e2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .shopBasket__total__cont {
+
+        .shopBasket__total__row {
+
+            .shopBasket__total__col {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 70px;
+                margin: 0 auto;
+
+                h3 {
+                    font-size: 25.2px;
+                    font-weight: 400;
+                    line-height: 27.72px;
+                    color: #333333;
+                }
+
+                p {
+                    font-size: 21px;
+                    font-weight: 400;
+                    line-height: normal;
+                    color: #333333;
+                }
+            }
+        }
+    }
+}
