@@ -16,7 +16,7 @@ const userModel = mongoose.model('Users', new mongoose.Schema({
         default: false
     },
     banDate: {
-        type: Date || null,
+        type: Date,
         default: null
     },
     banCount: {

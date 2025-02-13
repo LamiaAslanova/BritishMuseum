@@ -96,7 +96,8 @@ const Header = () => {
                                         <li><Link to='visit'>Visit</Link></li>
                                         <li><Link to='exhibitions-events'>Exhibitions and events</Link></li>
                                         <li><Link to='collection'>Collection</Link></li>
-                                        <li><Link className='rightmost' to='shop'>Shop</Link></li>
+                                        <li><Link to='shop'>Shop</Link></li>
+                                        <li><Link className='rightmost' to='contact-us'>Contact us</Link></li>
                                     </ul>
                                 </nav>
                             </div>
